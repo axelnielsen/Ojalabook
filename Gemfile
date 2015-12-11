@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'devise'
 #tener acceso a rails console
 gem 'protected_attributes'
+#formularios compatibles con bootstrap
+gem 'simple_form'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

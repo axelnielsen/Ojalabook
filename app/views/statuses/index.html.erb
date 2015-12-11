@@ -4,12 +4,12 @@
 <%= link_to "Crear nuevo post", new_status_path, class: "btn btn-success"%>
 <% @statuses.each do |status|%>
 <div class="status">
-  <strong><%= status.nombre %></strong>
+  <strong><%=  status.user.nombre_completo %></strong>
   <p><%=status.contenido %> </p>
   <div>
-    <%= link_to "Hace "+time_ago_in_words(status.created_at), status %> | 
+    <%= link_to "Hace "+time_ago_in_words(status.created_at), status %>
     <span class="admin">
-      <%= link_to "Editar", edit_status_path(status) %> | 
+       | <%= link_to "Editar", edit_status_path(status) %> | 
       <%= link_to "Borrar", status, method: :delete, data: {confirm: "Confirma eliminación del status seleccionado?"
       } %>
     </span>
